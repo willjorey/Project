@@ -1,0 +1,44 @@
+<ion-view view-title="{{team.name}}">
+  <ion-content class="padding">
+    <h1>
+      {{team.name}}
+    </h1>
+    <h2>Coach: {{team.coach}}</h2>
+    <p>Age: {{team.age}}</p>
+    <p>Gender: {{team.gender}}</p>
+    <h1>Player Averages</h1>
+
+    <ion-scroll direction="xy">
+      <div class="row header">
+        <div class="col col-20">NAME</div>
+        <div class="col col-10">PTS</div>
+        <div class="col col-10">3PM</div>
+        <div class="col col-10">3PA</div>
+        <div class="col col-10">FTM</div>
+        <div class="col col-10">MIN</div>
+        <div class="col col-10">FGA</div>
+        <div class="col col-10">OREB</div>
+        <div class="col col-10">DREB</div>
+        <div class="col col-10">AST</div>
+        <div class="col col-10">TOV</div>
+        <div class="col col-10">BLK</div>
+        <div class="col col-10">PF</div>
+      </div>
+      <div class="row" ng-repeat="stat in list">
+          <div class="col col-20">{{players[$index].fname}} {{players[$index].surname}}</div>
+          <div class="col col-10" >{{stat.PTS}}</div>
+          <div class="col col-10">{{stat.THREEPM}}</div>
+          <div class="col col-10">{{stat.THREEPA}}</div>
+          <div class="col col-10">{{stat.FTM}}</div>
+          <div class="col col-10">{{stat.MIN}}</div>
+          <div class="col col-10">{{stat.FGA}}</div>
+          <div class="col col-10">{{stat.OREB}}</div>
+          <div class="col col-10">{{stat.DREB}}</div>
+          <div class="col col-10">{{stat.AST}}</div>
+          <div class="col col-10">{{stat.TOV}}</div>
+          <div class="col col-10">{{stat.BLK}}</div>
+          <div class="col col-10">{{stat.PF}}</div>
+      </div>
+  </ion-scroll>
+  </ion-content>
+</ion-view>

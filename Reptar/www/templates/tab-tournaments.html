@@ -1,0 +1,9 @@
+<ion-view view-title="Tournaments">
+<ion-nav-view name="tab-tournaments"></ion-nav-view>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="tourny in tournaments" href="#/tab/tournament={{tourny.id}}">
+        <h2>{{tourny.age}} {{tourny.gender}}</h2>
+      </ion-item>
+  </ion-content>
+</ion-view>

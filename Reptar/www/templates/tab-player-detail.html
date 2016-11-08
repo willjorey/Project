@@ -1,0 +1,40 @@
+<ion-view view-title="{{player.fname}}">
+  <ion-content class="padding">
+  	<img src="{{player.image}}" width="60px">
+    <h2>
+      #{{player.number}} {{player.fname}} {{player.surname}}
+    </h2>
+    <h3>{{player.position}}</h3>
+	<ion-scroll direction="xy">
+	    <div class="row header">
+	      <div class="col">PTS</div>
+	      <div class="col">3PM</div>
+	      <div class="col">3PA</div>
+	      <div class="col">FTM</div>
+	      <div class="col">MIN</div>
+	      <div class="col">FGA</div>
+	      <div class="col">OREB</div>
+	      <div class="col">DREB</div>
+	      <div class="col">AST</div>
+	      <div class="col">TOV</div>
+	      <div class="col">BLK</div>
+	      <div class="col">PF</div>
+	    </div>
+	    <div class="row">
+          <div class="col">{{stat.PTS}}</div>
+          <div class="col">{{stat.THREEPM}}</div>
+          <div class="col">{{stat.THREEPA}}</div>
+          <div class="col">{{stat.FTM}}</div>
+          <div class="col">{{stat.MIN}}</div>
+          <div class="col">{{stat.FGA}}</div>
+          <div class="col">{{stat.OREB}}</div>
+          <div class="col">{{stat.DREB}}</div>
+          <div class="col">{{stat.REB}}</div>
+          <div class="col">{{stat.AST}}</div>
+          <div class="col">{{stat.TOV}}</div>
+          <div class="col">{{stat.BLK}}</div>
+          <div class="col">{{stat.PF}}</div>
+        </div>
+	</ion-scroll>
+  </ion-content>
+</ion-view>

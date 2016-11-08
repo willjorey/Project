@@ -1,0 +1,139 @@
+<ion-view view-title="">
+<ion-nav-view name="tab-games"></ion-nav-view>
+  <ion-content>
+  <h2 align="center">Final Score</h2>
+  <h3 align="center">{{game.hscore}} vs {{game.ascore}}</h3>
+  <div>
+    <strong>
+      <div class="row header" align="center">
+          <div class="col">{{game.home}}</div>
+          <div class="col"></div>
+          <div class="col">{{game.away}}</div>
+      </div>
+    </strong>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotAsts}}</div>
+      <div class="col"><b>Assists</b></div>
+      <div class="col">{{aTotAsts}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotRebs}}</div>
+      <div class="col"> <b>Total Rebounds</b> </div>
+      <div class="col">{{aTotRebs}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotOrebs}}</div>
+      <div class="col"> <b>Total Offensive Rebounds</b> </div>
+      <div class="col">{{aTotOrebs}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotDrebs}}</div>
+      <div class="col"> <b>Total Defensive Rebounds</b> </div>
+      <div class="col">{{aTotDrebs}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotSteals}}</div>
+      <div class="col"> <b>Steals</b> </div>
+      <div class="col">{{aTotSteals}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotBlocks}}</div>
+      <div class="col"> <b>Blocks</b> </div>
+      <div class="col">{{aTotBlocks}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotTurnovers}}</div>
+      <div class="col"> <b>Turnovers</b> </div>
+      <div class="col">{{aTotTurnovers}}</div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">{{hTotFouls}}</div>
+      <div class="col"> <b>Fouls</b> </div>
+      <div class="col">{{aTotFouls}}</div>
+    </div>
+
+  </div>
+
+  <h2>Box Score</h2>
+  <ion-scroll direction="xy">
+    <strong>
+      <div class="row header">
+        <div class="col col-20">{{game.home}}</div>
+        <div class="col col-10">PTS</div>
+        <div class="col col-10">3PM</div>
+        <div class="col col-10">3PA</div>
+        <div class="col col-10">FTM</div>
+        <div class="col">MIN</div>
+        <div class="col col-10">FGA</div>
+        <div class="col col-10">OREB</div>
+        <div class="col col-10">DREB</div>
+        <div class="col col-10">REB</div>
+        <div class="col col-10">AST</div>
+        <div class="col col-10">TOV</div>
+        <div class="col col-10">BLK</div>
+        <div class="col col-10">PF</div>
+      </div>
+    </strong>
+      <div class="row" ng-repeat="item in home">
+          <div class="col col-20">{{item.fname}} {{item.surname}}</div>
+          <div class="col col-10">{{item.PTS}}</div>
+          <div class="col col-10">{{item["3PM"]}}</div>
+          <div class="col col-10">{{item["3PA"]}}</div>
+          <div class="col col-10">{{item.FTM}}</div>
+          <div class="col">{{item.MIN}}</div>
+          <div class="col col-10">{{item.FGA}}</div>
+          <div class="col col-10">{{item.OREB}}</div>
+          <div class="col col-10">{{item.DREB}}</div>
+          <div class="col col-10">{{item.REB}}</div>
+          <div class="col col-10">{{item.AST}}</div>
+          <div class="col col-10">{{item.TOV}}</div>
+          <div class="col col-10">{{item.BLK}}</div>
+          <div class="col col-10">{{item.PF}}</div>
+      </div>
+
+      <strong>
+        <div class="row header">
+          <div class="col col-20">{{game.away}}</div>
+          <div class="col col-10">PTS</div>
+          <div class="col col-10">3PM</div>
+          <div class="col col-10">3PA</div>
+          <div class="col col-10">FTM</div>
+          <div class="col">MIN</div>
+          <div class="col col-10">FGA</div>
+          <div class="col col-10">OREB</div>
+          <div class="col col-10">DREB</div>
+          <div class="col col-10">REB</div>
+          <div class="col col-10">AST</div>
+          <div class="col col-10">TOV</div>
+          <div class="col col-10">BLK</div>
+          <div class="col col-10">PF</div>
+        </div>
+      </strong>
+
+      <div class="row" ng-repeat="item in away">
+          <div class="col col-20">{{item.fname}} {{item.surname}}</div>
+          <div class="col col-10">{{item.PTS}}</div>
+          <div class="col col-10">{{item["3PM"]}}</div>
+          <div class="col col-10">{{item["3PA"]}}</div>
+          <div class="col col-10">{{item.FTM}}</div>
+          <div class="col">{{item.MIN}}</div>
+          <div class="col col-10">{{item.FGA}}</div>
+          <div class="col col-10">{{item.OREB}}</div>
+          <div class="col col-10">{{item.DREB}}</div>
+          <div class="col col-10">{{item.REB}}</div>
+          <div class="col col-10">{{item.AST}}</div>
+          <div class="col col-10">{{item.TOV}}</div>
+          <div class="col col-10">{{item.BLK}}</div>
+          <div class="col col-10">{{item.PF}}</div>
+      </div>
+	</ion-scroll>
+  </ion-content>
+</ion-view>

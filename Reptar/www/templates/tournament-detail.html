@@ -1,0 +1,25 @@
+<ion-view view-title="{{tourny.name}}">
+  <ion-content class="padding">
+    <h1>
+      {{tourny.name}}
+    </h1>
+    <p>Date: {{tourny.date}}</p>
+    <p>Age: {{tourny.age}}</p>
+    <p>Gender: {{tourny.gender}}</p>
+    <button class="button button-block button-positive" ng-click="show = !show">Display Teams</button>
+      <ion-list ng-show="show">
+        <ion-item ng-repeat="team in participants" href="#/tab/teams/team={{team.id}}" class="team team-thumbnail-left">
+          <img src="{{team.image}}" width="60px">
+          <h2>{{team.name}}</h2>
+        </ion-item>
+      </ion-list>
+    <h1>Games</h1>
+    <h2>{{games.home}}</h2>
+    <ion-list>
+      <ion-item ng-repeat="item in games | filter: 3 track by $index" href="#/tab/games/game={{item.id}}">
+        <h2 align="left"><b>{{item.home}}</b> {{item.hscore}} vs {{item.ascore}} <b>{{item.away}}</b></h2><br>
+        <h3>{{item.date}}</h3>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

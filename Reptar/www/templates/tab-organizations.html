@@ -1,0 +1,13 @@
+
+<ion-view view-title="Organizations">
+  <ion-content class="padding">
+    <h2>Organizations</h2>
+    <ion-list>
+      <ion-item ng-repeat="orgs in organizations" type="item-text-wrap" href="#/tab/organizations/org={{orgs.id}}" class="orgs orgs-thumbnail-left">
+      <img src="{{orgs.image}}" width="60px">
+      <h2>{{orgs.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

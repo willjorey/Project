@@ -1,0 +1,9 @@
+<ion-view view-title="Players">
+<ion-nav-view name="tab-players"></ion-nav-view>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="player in players" type="item-text-wrap" href="#/tab/players/player={{player.id}}">
+        <h2>#{{player.number}} {{player.fname}} {{player.surname}}</h2>
+	</ion-list>
+  </ion-content>
+</ion-view>
