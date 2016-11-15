@@ -1,0 +1,25 @@
+<h1>{{greeting}}</h1>
+
+<div>
+	<h2>Create new Organization</h2>
+
+	<form method="post">
+		<h3>Name of Organization</h3>
+		<input type="text" name="organization" placeholder="Ex: NBA" required ng-model="org.name" ng-minlength="2">
+		<h4>Sport</h4>
+		<div class="form"></div>
+		<select name="sport" required ng-model="org.sport">
+			<option ng-repeat="sport in sports" value='{{sport.id}}'>{{sport.name}}</option>
+		</select>
+		<button type="submit" ng-click="insertOrganization(org)">Submit</button>
+		</form>
+</div>
+
+<div>
+	<h4>All Organizations</h4>
+	<table>
+		<tr ng-repeat="item in table track by $index">
+			<td>{{item.name}}</td>
+		</tr>	
+	</table>
+</div>

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Tournament</title>
+</head>
+<body>
+	<h1>Create Tournament</h1>
+
+	<div>
+		<form method="post">
+
+			<h3>Select An Organization</h3>
+			<select name="oid" required ng-model="tournament.oid">
+				<option ng-repeat="org in organizations" value="{{org.id}}">{{org.name}}</option>
+			</select>
+
+			<h3>Tournament Name</h3>
+			<input type="text" name="name" placeholder="Ex: UTSC Intramural" required ng-model="tournament.name"><br>
+
+			<h3>Date</h3>
+			<input type="date" name="date" placeholder="yyyy-mm-dd" required ng-model="tournament.date"><br>
+
+			<h3>Gender</h3>
+			<select name="gender" required ng-model="tournament.gender">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+
+			<h3>Age Group</h3>
+			<select name="age" required ng-model="tournament.age">
+				<option ng-repeat="age in age" value="{{age}}">{{age}}</option>
+			</select><br><br>
+			
+			<div align="right">	
+				<button type="submit" ng-click="insertTournament(tournament)">Submit</button>
+			</div>
+		</form>
+
+		<div>
+			<br>
+			<table>
+				<label>Tournaments</label>
+				<tr ng-repeat="tourny in tournaments track by $index">
+					<td>{{tourny.name}}</td>
+				</tr>	
+			</table>
+		</div>
+
+	</div>
+	
+	<br>
+	
+	<div align="left">	
+		<button ng-click="createGames(tid)">Create Games</button>
+	</div>
+
+</body>
+</html>

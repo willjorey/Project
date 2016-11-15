@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Games</title>
+</head>
+<body>
+	<h1>Create Games</h1>
+	<form method="post">
+
+		<label>Select Home Team</label><br>
+		<select name="home" require ng-model="game.home">
+			<option ng-repeat="team in teams" value="'{{team.name}}'|'{{team.id}}'">{{team.name}}</option>
+		</select><br>
+
+		<label>Select Away Team</label><br>
+		<select name="away" require ng-model="game.away">
+			<option ng-repeat="team in teams" value="'{{team.name}}'|'{{team.id}}'" >{{team.name}}</option>
+		</select><br>
+
+		<label>Date</label><br>
+		<input type="datetime" name="date" placeholder="yyyy-mm-dd hh:mm:00" required ng-model="game.date"><br>yyyy-mm-dd hh:mm:00<br>
+
+
+		<br><button type="submit" ng-click="insertGame(game)">Submit Game</button>
+
+	</form>
+</body>
+</html>
