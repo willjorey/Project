@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+
+<div>
+<br>
+	<h2>All Organizations</h2>
+	<div display="inline">
+		<ul id="organizations">
+			<li class="item" ng-repeat="orgs in organizations"><a href="/#!/view/organization={{orgs.id}}">{{orgs.name}}</a></li>
+		</ul>
+	</div>
+	<button ng-click="createOrganization()">Add Organizations</button>
+</div>

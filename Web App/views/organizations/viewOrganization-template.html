@@ -1,0 +1,11 @@
+<h1>View Organization</h1>
+
+<div>
+	<h2>Tournaments Held By Organization</h2>
+	<div>
+		<ul id="tournaments">
+			<li class="item" ng-repeat="tourny in tournaments"><a href="/#!/{{tourny.id}}">{{tourny.name}}</a></li>
+		</ul>
+	</div>
+	<button type="submit" ng-click="createTournaments()">Create Tournaments</button>
+</div>

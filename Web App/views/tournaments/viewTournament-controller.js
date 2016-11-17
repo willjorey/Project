@@ -9,8 +9,12 @@ angular.module('myApp.viewTournament', ['ngRoute'])
   });
 }])
 
-.controller('viewTournamentCtrl', function($scope, $http, dbService, organizationService, tournamentService, $location){
+.controller('viewTournamentCtrl', function($scope, $http,$q, dbService, organizationService, tournamentService, $routeParams){
   console.log("viewTournamentCtrl reporting for duty!");
   $scope.greeting = "Tournament";
 
+  tournamentService.getTournamentTeams($routeParams.id, $scope).then(function(data){
+    $scope.teams = data.data;
+    console.log(data.data);
+  });
 });

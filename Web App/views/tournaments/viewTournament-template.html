@@ -6,6 +6,14 @@
 </head>
 <body>
 	<h1>Current Teams in Tournament</h1>
-
+	<table>
+		<tr ng-repeat="team in teams track by $index">
+			<td>{{team.name}}</td>
+		</tr>	
+	</table>
+	<h1>Add Teams to Tournament</h1>
+	<select>
+		<option></option>
+	</select>
 </body>
 </html>
